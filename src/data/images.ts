@@ -265,12 +265,12 @@ export const GALLERY_IMAGES: ImageArtwork[] = [
   },
   {
     id: "20",
-    title: "Transcendence, 2026, Oil on canvas ",
+    title: "Strata, 2026, Acrylic on wood",
     artist: "Grace Refuerzo ",
     description: "Grace Refuerzo-level exhibition frame. Ready for replacement.",
-    price: "$5,800",
-    imageUrl: "/images/0001.jpeg",
-    productUrl: "#",
+    price: "$3,800.00",
+    imageUrl: "/images/IMG_2500.jpeg",
+    productUrl: "https://gracerefuerzoart.com/checkout/?add-to-cart=2793&quantity=1",
     width: 3.6,
     height: 4.0,
     size: "36in x 48in"
@@ -282,7 +282,7 @@ export const GALLERY_IMAGES: ImageArtwork[] = [
     description: "Grace Refuerzo-level exhibition frame. Ready for replacement.",
     price: "$5,800",
     imageUrl: "/images/0001.jpeg",
-    productUrl: "#",
+    productUrl: "",
     width: 3.6,
     height: 4.0,
     size: "36in x 48in"
