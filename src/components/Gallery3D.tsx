@@ -10,6 +10,7 @@ export type FloorType = 'oak-parquet';
 
 interface Gallery3DProps {
   onArtworkSelect: (artwork: Artwork | null) => void;
+  onArtworkDetails: (artwork: Artwork) => void;
   selectedArtwork: Artwork | null;
   currentRoom: number;
   onRoomChange: (nextRoom: number) => void;
@@ -144,7 +145,12 @@ function Rig({ selectedArtwork, currentRoom }: { selectedArtwork: Artwork | null
       // Zoom into artwork - scale focus distance dynamically on artwork dimensions
       const artRotation = new THREE.Euler(...selectedArtwork.rotation);
       const sizeFactor = Math.max(selectedArtwork.width, selectedArtwork.height);
-      const zoomDistance = Math.max(1.8, sizeFactor * 0.75 + 5.3);
+      const verticalFov = THREE.MathUtils.degToRad((state.camera as THREE.PerspectiveCamera).fov);
+      const aspect = state.size.width / state.size.height;
+      // Fit both the painting and its plaque on narrow mobile screens.
+      const contentHeight = selectedArtwork.height + 1.65;
+      const contentWidth = Math.max(selectedArtwork.width + 0.3, 2.9);
+      const zoomDistance = Math.max(contentHeight / 2 / Math.tan(verticalFov / 2), contentWidth / 2 / (Math.tan(verticalFov / 2) * aspect)) * 1.25;
       const offset = new THREE.Vector3(0, 0, zoomDistance);
       offset.applyEuler(artRotation);
       
@@ -662,7 +668,7 @@ function Room({ currentRoom }: { currentRoom: number }) {
   );
 }
 
-export default function Gallery3D({ onArtworkSelect, selectedArtwork, currentRoom, onRoomChange }: Gallery3DProps) {
+export default function Gallery3D({ onArtworkSelect, onArtworkDetails, selectedArtwork, currentRoom, onRoomChange }: Gallery3DProps) {
   return (
     <div className="w-full h-full bg-[#0A0A0A]">
       <Canvas 
@@ -681,6 +687,7 @@ export default function Gallery3D({ onArtworkSelect, selectedArtwork, currentRoo
                 key={artwork.id} 
                 artwork={artwork} 
                 onClick={onArtworkSelect}
+                onDetails={onArtworkDetails}
                 isActive={selectedArtwork?.id === artwork.id}
               />
             ))}
