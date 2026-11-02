@@ -118,13 +118,6 @@ export default function App() {
         onClose={() => setDetailsArtwork(null)} 
       />
 
-      {selectedArtwork && !detailsArtwork && (
-        <button onClick={() => setSelectedArtwork(null)}
-          className="absolute bottom-24 left-1/2 -translate-x-1/2 z-40 rounded-full bg-black/80 px-6 py-3 text-xs text-white border border-white/30 cursor-pointer">
-          Back to gallery
-        </button>
-      )}
-
       {/* Room Indicator */}
       <div className="absolute top-10 right-10 z-40 text-gold/60 text-[10px] tracking-[0.3em] font-serif">
         MAIN EXHIBITION
