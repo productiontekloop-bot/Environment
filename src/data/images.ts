@@ -300,7 +300,7 @@ export const GALLERY_IMAGES: ImageArtwork[] = [
   //   size: "36in x 48in"
   // },
   {
-    id: "23",
+    id: "22",
     title: "Beneath the Surface Series 3 ",
     artist: "Grace Refuerzo ",
     description: "Grace Refuerzo-level exhibition frame. Ready for replacement.",
@@ -313,6 +313,18 @@ export const GALLERY_IMAGES: ImageArtwork[] = [
   },
    {
     id: "24",
+    title: "Beneath the Surface Series 3 ",
+    artist: "Grace Refuerzo ",
+    description: "Grace Refuerzo-level exhibition frame. Ready for replacement.",
+    price: "$3,800",
+    imageUrl: "/images/11.jpg",
+    productUrl: "https://gracerefuerzoart.com/checkout/?add-to-cart=2804&quantity=1",
+    width: 3.6,
+    height: 4.0,
+    size: "36in x 48in"
+  },
+   {
+    id: "25",
     title: "Beneath the Surface Series 2 ",
     artist: "Grace Refuerzo ",
     description: "Grace Refuerzo-level exhibition frame. Ready for replacement.",
@@ -324,7 +336,7 @@ export const GALLERY_IMAGES: ImageArtwork[] = [
     size: "36in x 48in"
   },
    {
-    id: "25",
+    id: "26",
     title: "Beneath the Surface Series 1 ",
     artist: "Grace Refuerzo ",
     description: "Grace Refuerzo-level exhibition frame. Ready for replacement.",
@@ -334,19 +346,7 @@ export const GALLERY_IMAGES: ImageArtwork[] = [
     width: 3.6,
     height: 4.0,
     size: "36in x 48in"
-  },
-  //  {
-  //   id: "26",
-  //   title: "Transcendence, 2026, Oil on canvas ",
-  //   artist: "Grace Refuerzo ",
-  //   description: "Grace Refuerzo-level exhibition frame. Ready for replacement.",
-  //   price: "$5,800",
-  //   imageUrl: "/images/0001.jpeg",
-  //   productUrl: "#",
-  //   width: 3.6,
-  //   height: 4.0,
-  //   size: "36in x 48in"
-  // }
+  }
   
 ];
 

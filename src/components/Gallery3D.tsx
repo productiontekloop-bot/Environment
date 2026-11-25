@@ -699,7 +699,7 @@ export default function Gallery3D({ onArtworkSelect, onArtworkDetails, selectedA
           <Room currentRoom={currentRoom} />
           
           <group>
-            {ARTWORKS.filter(art => art.room === currentRoom).map((artwork) => (
+            {ARTWORKS.filter(art => art.room === currentRoom && art.id !== "22").map((artwork) => (
               <ArtFrame 
                 key={artwork.id} 
                 artwork={artwork} 
